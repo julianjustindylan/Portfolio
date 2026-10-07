@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parcours & CV - Dylan Julian-Justin</title> 
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>Dylan Julian-Justin</h1>
+        <h2><strong>17 ans<br><strong></h2>
+        <p id="header-subtitle">Terminale Bac Pro CIEL - Parcours interactif étape par étape</p>
+        <em>Recherche active d'un stage pratique du 9 novembre au 18 décembre 2026.</em></p>
+        <strong>Contact :</strong> julianjustindylan10@gmail.com | 07 65 75 27 56 (Toulouse)</p>
+    </header>
+
+    <!-- Conteneur des étapes -->
+    <div class="container" id="steps-container">
+        <!-- Étape 1 -->
+        <div class="step-card active" id="card-1">
+            <div class="step-header">
+                <h3>1. Formation</h3>
+                <span class="badge">Étape 1 / 4</span>
+            </div>
+            <div class="step-content">
+                <p><strong>Dylan Julian-Justin</<strong>
+                Élève en classe de Terminale Bac Professionnel <strong>C.I.E.L.</strong> (Cybersécurité, Informatique et Réseaux, Électronique) au <em>Lycée Professionnel Privé les Potiers</em> à Toulouse.</p>
+                
+            </div>
+            <div class="step-footer">
+                <div></div> <!-- Espace vide pour aligner à droite -->
+                <button onclick="nextStep(2)">Étape suivante ➔</button>
+            </div>
+        </div>
+
+        <!-- Étape 2 -->
+        <div class="step-card" id="card-2">
+            <div class="step-header">
+                <h3>2. Expériences Professionnelles & Stages</h3>
+                <span class="badge">Étape 2 / 4</span>
+            </div>
+            <div class="step-content">
+                <p>Parcours riche en stages pratiques :<br>
+                • <strong>Airbus</strong> (Pôle peinture)<br>
+                • <strong>Tradlibre</strong>  
+                • <strong>INP ENSEEIHT (DSIN)</strong><br>
+                • <strong>Darty</strong> & <strong>La Fixerie</strong> (réparation électronique)<br>
+                
+            </div>
+            <div class="step-footer">
+                <button class="btn-prev" onclick="nextStep(2)">⬅ Précédent</button>
+                <button onclick="nextStep(4)">Étape suivante ➔</button>
+            </div>
+        </div>
+        <!-- Étape 3 -->
+        <div class="step-card" id="card-3">
+            <div class="step-header">
+                <h3>3. Compétences </h3>
+                <span class="badge">Étape 3 / 4</span>
+            </div>
+            <div class="step-content">
+                <p>Maîtrise de l'informatique (Word, Excel, Scratch, HTML, JavaScript) et des réseaux sociaux.<br>
+                Certifications obtenues : <strong>PSC1</strong> (Diplôme de citoyen de sécurité civile), formation PSC du Rotary Club, et test d'anglais <strong>EVALANG </strong>.</p>
+            </div>
+            <div class="step-footer">
+                <button class="btn-prev" onclick="nextStep(1)">⬅ Précédent</button>
+                <button onclick="nextStep(3)">Étape suivante ➔</button>
+            </div>
+        </div>
+        <!-- Étape 4 -->
+        <div class="step-card" id="card-4">
+            <div class="step-header">
+                <h3>4. Loisirs </h3>
+                <span class="badge">Étape 4 / 4</span>
+            </div>
+            <div class="step-content">
+                <p><strong>Loisirs :</strong> Karaté (pratiqué depuis 12 ans), football, jeux vidéo et voyages.<br>
+            </div>
+            <div class="step-footer">
+                <button class="btn-prev" onclick="nextStep(3)">⬅ Précédent</button>
+                <button onclick="showCVOverview()">Terminer & Voir le CV complet 🎉</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Aperçu global du CV (masqué au début) -->
+    <div id="cv-overview">
+        <h2>Aperçu Global du CV - Dylan Julian-Justin</h2>
+        
+        <div class="cv-section">
+            <h4>🎯 Profil & Objectif</h4>
+            <p>Terminale Bac Pro C.I.E.L. au Lycée Privé les Potiers (Toulouse). Recherche un stage pratique du 9 novembre au 18 décembre 2026.</p>
+        </div>
+
+        <div class="cv-section">
+            <h4>🎓 Formations & Certifications</h4>
+            <ul>
+                <li>Diplôme National du Brevet (Collège Sainte Marie des Ursulines)</li>
+                <li>PSC1 & Formation premiers secours (Rotary Club)</li>
+                <li>Test EVALANG Anglais (Niveau A1+) & ASSR2</li>
+            </ul>
+        </div>
+
+        <div class="cv-section">
+            <h4>💼 Expériences Professionnelles</h4>
+            <ul>
+                <li><strong>La Fixerie</strong> (Blagnac) - Réparation électronique</li>
+                <li><strong>Darty</strong> (Colomiers & Portet) - Stage de Première</li>
+                <li><strong>INP ENSEEIHT - DSIN</strong> & <strong>Tradlibre</strong> (Toulouse)</li>
+                <li><strong>Airbus</strong> (Site Louis Breguet) - Stage de Troisième</li>
+            </ul>
+        </div>
+
+        <div class="cv-section">
+            <h4>💻 Compétences & Loisirs</h4>
+            <p><strong>Informatique :</strong> Word, Excel, PowerPoint, Scratch, HTML, JavaScript.<br>
+            <strong>Loisirs :</strong> Karaté (12 ans), Foot, Jeux vidéo, Voyages.<br>
+            <strong>Contact :</strong> julianjustindylan10@gmail.com | 07 65 75 27 56</p>
+        </div>
+
+        <button class="restart-btn" onclick="resetWizard()">Recommencer le parcours 🔄</button>
+    </div>
+
+    <script>
+        function nextStep(stepNumber) {
+            document.querySelectorAll('.step-card').forEach(card => {
+                card.classList.remove('active');
+            });
+            const activeCard = document.getElementById('card-' + stepNumber);
+            if (activeCard) {
+                activeCard.classList.add('active');
+                activeCard.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            }
+        }
+
+        function showCVOverview() {
+            const stepsContainer = document.getElementById('steps-container');
+            if (stepsContainer) {
+                stepsContainer.style.display = 'none';
+            }
+            
+            const subtitle = document.getElementById('header-subtitle');
+            if (subtitle) {
+                subtitle.style.display = 'none';
+            }
+            
+            const overview = document.getElementById('cv-overview');
+            if (overview) {
+                overview.style.display = 'block';
+                overview.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }
+        }
+
+        function resetWizard() {
+            const overview = document.getElementById('cv-overview');
+            if (overview) {
+                overview.style.display = 'none';
+            }
+
+            const stepsContainer = document.getElementById('steps-container');
+            if (stepsContainer) {
+                stepsContainer.style.display = 'flex';
+            }
+
+            const subtitle = document.getElementById('header-subtitle');
+            if (subtitle) {
+                subtitle.style.display = 'block';
+            }
+            
+            document.querySelectorAll('.step-card').forEach(card => card.classList.remove('active'));
+            const card1 = document.getElementById('card-1');
+            if (card1) {
+                card1.classList.add('active');
+            }
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+    </script>
+
+</body>
+</html>

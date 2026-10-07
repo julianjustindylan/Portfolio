@@ -1,0 +1,177 @@
+:root {
+            --bg-color: #090d16;
+            --card-bg: #111827;
+            --border-color: #1f2937;
+            --accent: #38bdf8;
+            --text-main: #f9fafb;
+            --text-muted: #9ca3af;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            margin: 0;
+            padding: 40px 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            color: var(--accent);
+            margin: 0 0 10px 0;
+        }
+
+        header p {
+            color: var(--text-muted);
+            font-size: 1.1rem;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 800px;
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+        }
+
+        .step-card {
+            background-color: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
+            padding: 35px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+            opacity: 0.4;
+            transform: scale(0.98);
+            transition: all 0.3s ease;
+        }
+
+        .step-card.active {
+            opacity: 1;
+            transform: scale(1);
+            border-color: var(--accent);
+            box-shadow: 0 15px 40px rgba(56, 189, 248, 0.15);
+        }
+
+        .step-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 15px;
+        }
+
+        .step-header h3 {
+            margin: 0;
+            font-size: 1.5rem;
+            color: var(--accent);
+        }
+
+        .badge {
+            background-color: #0369a1;
+            color: white;
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: bold;
+        }
+
+        .step-content p {
+            font-size: 1.15rem;
+            line-height: 1.7;
+            color: #d1d5db;
+            margin-bottom: 25px;
+        }
+
+        .step-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        button {
+            background-color: var(--accent);
+            color: #0f172a;
+            border: none;
+            padding: 12px 28px;
+            border-radius: 8px;
+            font-size: 1rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background 0.2s, transform 0.1s;
+        }
+
+        button:hover {
+            background-color: #0ea5e9;
+            transform: translateY(-2px);
+        }
+
+        .btn-prev {
+            background-color: #334155;
+            color: white;
+        }
+        .btn-prev:hover {
+            background-color: #475569;
+        }
+
+        /* Style pour l'aperçu global du CV */
+        #cv-overview {
+            display: none;
+            width: 100%;
+            max-width: 800px;
+            background-color: var(--card-bg);
+            border: 2px solid var(--accent);
+            border-radius: 16px;
+            padding: 40px;
+            box-shadow: 0 20px 50px rgba(56, 189, 248, 0.2);
+            animation: fadeIn 0.5s ease-in-out;
+            box-sizing: border-box;
+        }
+
+        #cv-overview h2 {
+            color: var(--accent);
+            border-bottom: 2px solid var(--border-color);
+            padding-bottom: 10px;
+            margin-top: 0;
+        }
+
+        .cv-section {
+            margin-bottom: 25px;
+        }
+
+        .cv-section h4 {
+            color: #38bdf8;
+            margin-bottom: 8px;
+            font-size: 1.2rem;
+        }
+
+        .cv-section p, .cv-section ul {
+            color: #d1d5db;
+            line-height: 1.6;
+            margin: 0;
+        }
+
+        .cv-section ul {
+            padding-left: 20px;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .restart-btn {
+            display: block;
+            margin: 30px auto 0 auto;
+            background-color: #334155;
+            color: white;
+        }
+        .restart-btn:hover { background-color: #475569; }
